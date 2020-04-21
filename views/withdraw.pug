@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    form(action="/api/check-balance")
+        h3 Stan konta
+        label(for='pesel') Pesel:
+        br
+        input#pesel(type="number" name="pesel" )
+        br
+        label(for='accnum') Numer konta:
+        br
+        input#accnum(type="number" name="accnum")
+        br
+        button(type='submit') Sprawdz stan
+        br
+        if (balance)
+            p Saldo konta: #{balance}
+        if (error)
+            p #{error}

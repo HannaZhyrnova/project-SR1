@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+    form
+        h3 Wyplata z konta
+        label(for='accnumin') Numer konta:
+        br
+        input#accnumin(type="number" name="accnumin")
+        br
+        label(for='amount') Kwota:
+        br
+        input#amount(type="number" name="amount")
+        br
+        button(type='submit') Zatwierdz

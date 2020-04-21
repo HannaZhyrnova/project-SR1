@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    form(action="/api/cashin")
+        h3 Wplata na konto
+        label(for='accnumin') Numer konta:
+        br
+        input#accnumin(type="number" name="accnumin")
+        br
+        label(for='amount') Kwota:
+        br
+        input#amount(type="number" name="amount")
+        br
+        button(type='submit') Zatwierdz
+        br
+        if (message)
+            p #{message}

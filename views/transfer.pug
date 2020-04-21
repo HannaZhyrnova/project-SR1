@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    form(action='/api/transfer')
+        h3 Przelew na konto
+        label(for='accnumout') Konto nadawcy:
+        br
+        input#accnumout(type="number" name="accnumout")
+        br
+        label(for='accnumin') Konto odbiorcy:
+        br
+        input#accnumin(type="number" name="accnumin")
+        br
+        label(for='amount') Kwota:
+        br
+        input#amount(type="number" name="amount")
+        br
+        button(type='submit') Zatwierdz
+        br
+        if (message)
+            p #{message}
