@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    a(href="/") Powrot
+    br
+    form(action="/api/create-account")
+        h3 Utworz konto
+        label(for='name') Imie:
+        br
+        input#name(name="name")
+        br
+        label(for='surname') Nazwisko:
+        br
+        input#surname(name="surname")
+        br
+        label(for='pesel') Pesel:
+        br
+        input#pesel(type="number" name="pesel")
+        br
+        button(type='submit') Utworz konto
+        br
+        if (message)
+            p #{message}

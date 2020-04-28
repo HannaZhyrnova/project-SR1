@@ -1,15 +1,19 @@
 extends layout
 
 block content
-
-    form
+    a(href="/") Powrot
+    br
+    form(action='/api/cashout')
         h3 Wyplata z konta
-        label(for='accnumin') Numer konta:
+        label(for='accnum') Numer konta:
         br
-        input#accnumin(type="number" name="accnumin")
+        input#accnum(type="number" name="accnum")
         br
         label(for='amount') Kwota:
         br
         input#amount(type="number" name="amount")
         br
         button(type='submit') Zatwierdz
+        br
+        if (message)
+            p #{message}

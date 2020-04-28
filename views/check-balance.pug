@@ -1,12 +1,10 @@
 extends layout
 
 block content
+    a(href="/") Powrot
+    br
     form(action="/api/check-balance")
         h3 Stan konta
-        label(for='pesel') Pesel:
-        br
-        input#pesel(type="number" name="pesel" )
-        br
         label(for='accnum') Numer konta:
         br
         input#accnum(type="number" name="accnum")
